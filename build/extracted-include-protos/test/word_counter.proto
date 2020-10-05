@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.whitepaper";
+option java_outer_classname = "WordCounter";
+
+package wordcounter;
+
+service WordCounterService {
+  rpc countWords (CountRequest) returns (CountResponse) {}
+}
+
+message CountRequest {
+  string message = 1;
+}
+
+message CountResponse {
+  int32 count = 1;
+}
+
