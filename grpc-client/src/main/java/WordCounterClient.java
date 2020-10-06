@@ -1,8 +1,9 @@
-import com.whitepaper.wordcounter.CountRequest;
-import com.whitepaper.wordcounter.CountResponse;
-import com.whitepaper.wordcounter.WordCounterServiceBaseGrpc;
+
 import io.grpc.ManagedChannel;
 import io.grpc.ManagedChannelBuilder;
+import wordcounter.CountRequest;
+import wordcounter.CountResponse;
+import wordcounter.WordCounterServiceBaseGrpc;
 
 public class WordCounterClient {
     public static void main(String[] args) {

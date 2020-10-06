@@ -10,13 +10,12 @@ repositories {
     mavenCentral()
 }
 
- dependencies {
-     compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
-     compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.3'
-     implementation 'io.grpc:grpc-netty-shaded:1.32.1'
+dependencies {
+    implementation 'io.grpc:grpc-netty:1.32.1'
     implementation 'io.grpc:grpc-protobuf:1.32.1'
     implementation 'io.grpc:grpc-stub:1.32.1'
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53' // necessary for Java 9+
+
 }
 
 protobuf {

@@ -1,13 +1,14 @@
 package com.whitepaper.wordcounter;
 
-import com.whitepaper.CountRequest;
-import com.whitepaper.CountResponse;
-import com.whitepaper.WordCounterServiceGrpc;
+
 import io.grpc.stub.StreamObserver;
+import wordcounter.CountRequest;
+import wordcounter.CountResponse;
+import wordcounter.WordCounterServiceBaseGrpc;
 
 import java.util.Optional;
 
-public class WordCounterServiceImpl extends WordCounterServiceGrpc.WordCounterServiceImplBase {
+public class WordCounterServiceImpl extends WordCounterServiceBaseGrpc.WordCounterServiceBaseImplBase {
 
     @Override
     public void countWords(CountRequest request, StreamObserver<CountResponse> responseObserver) {
