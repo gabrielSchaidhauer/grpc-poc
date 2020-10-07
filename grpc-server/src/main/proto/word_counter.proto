@@ -5,13 +5,41 @@ package wordcounter;
 
 service WordCounterServiceBase {
   rpc countWords (CountRequest) returns (CountResponse) {}
+  rpc filterWords (FilterWordsRequest) returns (stream FilterWordsResponse) {}
+  rpc buildMessage (stream BuildMessageRequest) returns (BuildMessageResponse) {}
+  rpc countLetters (stream CountLettersRequest) returns (stream CountLettersResponse) {}
 }
 
 message CountRequest {
   string message = 1;
 }
 
+message FilterWordsRequest {
+  string message = 1;
+}
+
 message CountResponse {
   int32 count = 1;
+}
+
+message  FilterWordsResponse {
+  string word = 1;
+}
+
+message BuildMessageRequest {
+  string word = 1;
+}
+
+message BuildMessageResponse {
+  string message = 1;
+}
+
+message CountLettersRequest {
+  string word = 1;
+}
+
+message CountLettersResponse {
+  int32 count = 1;
+  string word = 2;
 }
 
